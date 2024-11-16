@@ -1,0 +1,140 @@
+/* XL */
+@media (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+/* LG */
+@media (max-width: 1199px) {
+  .text-lg-left {
+    text-align: left;
+  }
+  .d-lg-none {
+    display: none;
+  }
+  .slider .slider-items {
+    text-align: left;
+    left: 40%;
+  }
+  .history .history-content {
+    padding: 0 !important;
+  }
+  .booking::before {
+    content: "";
+    height: 380px !important;
+  }
+}
+/* MD */
+@media (max-width: 991px) {
+  .container {
+    max-width: 740px;
+  }
+  .w-md-3 {
+    width: 33.33% !important;
+  }
+  .w-md-2 {
+    width: 50% !important;
+  }
+  .w-md-1 {
+    width: 100% !important;
+  }
+  .relative-md {
+    position: relative !important;
+  }
+  /* HEADER */
+  header {
+    padding: 15px 5px;
+  }
+  header .container {
+    position: relative;
+  }
+  header .container nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: none;
+  }
+  header .container nav ul {
+    flex-direction: column !important;
+    padding: 10px 0;
+  }
+  header .container nav ul li {
+    padding: 10px;
+  }
+  header .container .toggle {
+    display: block;
+  }
+  .history .history-content {
+    padding-top: 20px !important;
+  }
+  .food .food-title {
+    padding-bottom: 10px;
+  }
+  .food .food-items {
+    padding-top: 15px;
+  }
+  .menu a {
+    display: none;
+  }
+  .testimonial-content {
+    padding-top: 25px;
+  }
+  .slick-prev:before, .slick-next:before {
+    display: none !important;
+  }
+  .booking::before {
+    content: "";
+    height: 560px !important;
+  }
+  .booking .booking-inner .booking-item form .e-mail {
+    width: 67% !important;
+  }
+  .booking .booking-inner .booking-item form button {
+    width: 67% !important;
+  }
+}
+/* SM */
+@media (max-width: 767px) {
+  .container {
+    max-width: 560px;
+  }
+  .w-sm-2 {
+    width: 50% !important;
+  }
+  .slider h2 {
+    font-size: 22px !important;
+  }
+  .slider h1 {
+    font-size: 35px !important;
+  }
+  .slider p {
+    font-size: 16px !important;
+  }
+  .slider a {
+    margin-top: 10px !important;
+  }
+  .booking::before {
+    content: "";
+    height: 610px !important;
+  }
+}
+/* XS */
+@media (max-width: 575px) {
+  .w-xs-1 {
+    width: 100% !important;
+  }
+  .booking .booking-inner .booking-item form .e-mail {
+    width: 50% !important;
+  }
+  .booking .booking-inner .booking-item form button {
+    width: 50% !important;
+  }
+  .booking::before {
+    content: "";
+    height: 910px !important;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

@@ -1,0 +1,233 @@
+
+/* XL */
+
+@media(max-width:1399px){
+    .container{
+		max-width:1140px;
+	}
+}
+
+/* LG */
+
+@media(max-width:1199px){
+		
+    .text-lg-left{
+        text-align: left;
+    }
+    .d-lg-none{
+        display: none;
+    }
+
+    // SLIDER
+
+    .slider .slider-items{
+        text-align: left;
+        left:40%;
+    }
+
+    // HISTORY
+
+    .history .history-content{
+        padding:0!important;
+    }
+
+    // BOOKING
+
+   
+   .booking{
+        &::before{
+            content: '';
+            height:380px!important;
+        }
+   }
+}
+
+/* MD */
+
+@media(max-width:991px){
+	
+    .container{
+		max-width:740px;
+	}
+    .w-md-3{
+        width:33.33%!important;
+    }
+    .w-md-2{
+        width:50%!important;
+    }
+    .w-md-1{
+        width:100%!important;
+    }
+    .relative-md{
+        position: relative!important;
+    }
+
+    /* HEADER */
+	
+
+    header{
+        padding:15px 5px;
+
+        .container{
+            position: relative;
+            nav{
+                position:absolute;
+                top:100%;
+                left:0;
+                right:0;
+                background-color: black;
+                display: none;
+
+                    ul{
+                        flex-direction:column!important;
+                        padding:10px 0;
+
+                        li{
+                            padding:10px;
+                        }
+                    }
+            }
+    
+            .toggle{
+                display: block;
+            }
+        }
+    }
+
+    // HISTORY
+
+    .history{
+        .history-content{
+            padding-top:20px!important;
+        }
+    }
+
+    // FOOD
+
+    .food{
+        .food-title{
+            padding-bottom: 10px;
+        }
+        .food-items{
+            padding-top: 15px;
+        }
+    }
+
+    // MENU
+
+    .menu{
+        a{
+          display:none;
+        }
+    }
+
+    // TESTIMONIAL
+
+    .testimonial-content{
+        padding-top: 25px;
+    }
+
+    // SPECIALITY
+
+    .slick-prev:before,.slick-next:before{
+        display:none!important;
+    }
+
+     // BOOKING
+
+   
+   .booking{
+    &::before{
+        content: '';
+        height:560px!important;
+    }
+}
+
+.booking{
+    .booking-inner{
+        .booking-item{
+            form{
+                .e-mail{
+                    width: 67% !important;
+                }
+                button{
+                    width: 67% !important;
+                }
+            }
+        }
+    }
+}
+	
+}
+
+/* SM */
+
+@media(max-width:767px){
+	
+    .container{
+		max-width:560px;
+	}
+    .w-sm-2{
+        width:50%!important;
+    }
+
+
+	// SLIDER
+
+    .slider{
+        h2{
+            font-size: 22px!important;
+        }
+        h1{
+            font-size: 35px!important;
+        }
+        p{
+            font-size: 16px!important;
+        }
+        a{
+            margin-top: 10px!important;
+        }
+    }
+
+    .booking{
+        &::before{
+            content: '';
+            height:610px!important;
+        }
+    }
+   
+}
+
+/* XS */
+
+@media(max-width:575px){
+	
+    .w-xs-1{
+        width:100%!important;
+    }
+
+//    BOOKING
+
+.booking{
+    .booking-inner{
+        .booking-item{
+            form{
+                .e-mail{
+                    width: 50% !important;
+                }
+                button{
+                    width: 50% !important;
+                }
+            }
+        }
+    }
+}
+
+.booking{
+    &::before{
+        content: '';
+        height:910px!important;
+    }
+}
+	
+}

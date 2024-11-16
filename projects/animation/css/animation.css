@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.project2{
+    height:100vh;
+}
+.project-img h6{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+}

@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="fonts/icons/remixicon.css" type="text/css">
+    <link rel="stylesheet" href="fonts/jost/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="slick/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="slick/slick.css" type="text/css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --theme-slate: rgba(51, 65, 85);
+            --theme-slate-opacity: rgba(51, 65, 85, 0.9);
+            --theme-color: rgb(8, 145, 178);
+        }
+
+        body{
+            font-family: jost;
+        }
+        .active {
+            background-color: var(--theme-slate-opacity) !important;
+            box-shadow: 0 0 3px rgb(60, 72, 88 / 0.15);
+            z-index: 9;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            animation: slide 2s linear;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .switcher {
+            transform: translateX(0) translateY(-50%) !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: white;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: var(--theme-color);
+        }
+
+        /* HEADER */
+
+        header nav ul li a:hover {
+            color: var(--theme-color);
+        }
+
+        /* ABOUT */
+
+
+        .about-img a:before {
+            content: '';
+            width: 70px;
+            height: 70px;
+            background-color: rgba(84 ,168 ,199,0.7);
+            opacity: 0.4;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: scale 3s infinite;
+        }
+
+        @keyframes scale{
+	        50%{
+		        transform:translate(-50%, -50%) scale(1.2);
+	        }
+        }
+
+        .about:before,
+        .join:before,
+        footer:before {
+            content: '';
+            width: 100%;
+            height: 200px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -37px;
+            left: 0;
+            right: 0;
+            transform: skewY(-3deg);
+        }
+
+        /* JOIN */
+
+        .join {
+            background: url(img/join.jpg), rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-blend-mode: darken;
+            background-position: center;
+        }
+
+        .join:before {
+            bottom: -38px;
+            height: 120px;
+        }
+
+        /* FOOTER */
+
+        footer:before {
+            bottom: inherit;
+            top: -13%;
+            height: 150px;
+        }
+
+        /* BTN-HOVER */
+
+        .btn:hover{
+            transform: translateY(-7px);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="absolute top-0 left-0 right-0 z-10 px-5" style="background-color: var(--theme-slate);">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <a href="javascript:void(0)" class="py-7">
+                    <img src="img/logo.png" alt="logo" title="logo" width="150px">
+                </a>
+                <nav class="hidden md:block absolute top-full right-0 left-0 md:static">
+                    <ul class="flex flex-col md:flex-row md:bg-inherit bg-black">
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="text-white py-7 inline-block ps-7 md:border-none border-b w-full border-opacity-50 border-white transition-[0.4s]">Demos</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="text-white py-7 inline-block ps-7 md:border-none border-b w-full border-opacity-50 border-white transition-[0.4s]">Pages</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="text-white py-7 inline-block ps-7 md:border-none border-b w-full border-opacity-50 border-white transition-[0.4s]">Projects</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="text-white py-7 inline-block ps-7 md:border-none border-b w-full border-opacity-50 border-white transition-[0.4s]">Blogs</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"
+                                class="text-white py-7 inline-block ps-7 md:border-none border-b w-full border-opacity-50 border-white transition-[0.4s]">Blocks</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="text-white py-7 inline-block ps-7 transition-[0.4s]">Documentation</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="hidden lg:block">
+                    <a href="javascript:void(0)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-white inline-block">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)" class="text-white inline-block px-5 py-3 ms-5 rounded"
+                        style="background-color: var(--theme-color);">Contact</a>
+                </div>
+                <a href="javascript:void(0)" class="text-white md:hidden toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- SLIDER -->
+
+        <section class="slider relative">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/banner1.webp" alt="banner1" title="banner1" class="relative block object-cover w-full h-[700px] brightness-75">
+                        <div class="slider-item absolute top-1/2 left-1/2  animate__fadeIn wow" style="transform: translate(-50%,-50%);">
+                            <h2 class="lg:text-6xl text-white text-3xl">Today's Every Problems Solution is here !</h2>
+                            <p class="text-white py-5">Our approach is rooted in innovation, agility, and collaboration.
+                                We believe in constantly pushing boundaries, exploring new possibilities, and embracing
+                                emerging technologies to stay ahead of the curve.</p>
+                            <a href="javascript:void(0)" class="text-white px-5 py-3 inline-block rounded btn transition-[1s]"
+                                style="background-color: var(--theme-color);">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/banner2.jpg" alt="banner2" title="banner2" class="relative  block object-cover w-full h-[700px] brightness-75">
+                        <div class="slider-item absolute top-1/2 left-1/2 animate__fadeIn wow" style="transform: translate(-50%,-50%);">
+                            <h2 class="text-6xl text-white">What's Your Need ?</h2>
+                            <p class="text-white py-5">Whether it's harnessing the power of artificial intelligence,
+                                leveraging the Internet of Things, or implementing blockchain technology, we are
+                                dedicated to harnessing the full potential of technology to address today's challenges
+                                head-on</p>
+                            <a href="javascript:void(0)" class="text-white  px-5 py-3 inline-block rounded btn transition-[1s]"
+                                style="background-color: var(--theme-color);">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/banner3.jpg" alt="banner3" title="banner3" class="relative  block object-cover w-full h-[700px] brightness-75">
+                        <div class="slider-item absolute top-1/2 left-1/2 animate__fadeIn wow" style="transform: translate(-50%,-50%);">
+                            <h2 class="text-6xl text-white">Let's Meet to Discuss About Solution !</h2>
+                            <p class="text-white py-5">we are dedicated to harnessing the full potential of technology
+                                to address today's challenges head-on. Our ultimate goal is not just to solve problems,
+                                but to pave the way for a brighter, more efficient, and more sustainable future for all.
+                            </p>
+                            <a href="javascript:void(0)" class="text-white px-5 py-3 inline-block rounded btn transition-[1s]"
+                                style="background-color: var(--theme-color);">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <div class="switch fixed top-1/2 right-0 z-10 transition-[0.4s] translate-x-[100%] translate-y-[-50%]">
+            <i class="ri-palette-fill cursor-pointer text-3xl border-2 border-solid px-3 inline-block absolute top-0 right-full py-[12px]" style="color:var(--theme-color);border-color: var(--theme-color);"></i>
+            <ul class="flex border-2 border-solid p-[5px] border-l-0" style="border-color: var(--theme-color);">
+                <li style="background-color: #7F9F80; color:black;" class="h-[50px] w-[50px] cursor-pointer"></li>
+                <li style="background-color: #7AA2E3; color:black;" class="h-[50px] w-[50px] cursor-pointer mx-[5px]"></li>
+                <li style="background-color: #419197; color:black;" class="h-[50px] w-[50px] cursor-pointer"></li>
+            </ul>
+        </div>
+
+        <!-- ABOUT -->
+
+        <section class="about bg-slate-700 py-[100px] relative px-5">
+            <div class="container mx-auto">
+                <div class="about-inner">
+                    <div class="flex flex-wrap items-center">
+                        <div class="w-full lg:w-6/12">
+                            <div class="about-content animate__fadeInDown wow">
+                                <h1 class="text-5xl text-white font-bold">Sandbox focuses on <span
+                                        style="color:var(--theme-color)">Customer Satisfaction</span></h1>
+                                <p class="text-white text-2xl py-5">We carefully consider our solutions to support each
+                                    and every stage of your growth.</p>
+                                <a href="javascript:void(0)" class="text-white px-5 py-3 rounded inline-block btn transition-[1s]"
+                                    style="background-color: var(--theme-color);">Get Started</a>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-6/12">
+                            <div class="about-img relative lg:ps-5 pt-7 animate__fadeInDown wow" data-wow-delay="0.5s">
+                                <img src="img/about-img.jpg" alt="about-img" title="about-img" width="100%"
+                                    class="rounded-xl block">
+                                <a href="https://sandbox-tailwindcss.ibthemespro.com/assets/media/movie.mp4" target="_blank"
+                                    class="inline-block bg-cyan-700 text-white absolute top-1/2 left-1/2 p-3 rounded-full"
+                                    style="background-color: var(--theme-color);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                    </svg>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+
+        <section class="services py-[100px] overflow-hidden px-5">
+            <div class="container mx-auto">
+                <div class="services-title pb-10">
+                    <div class="w-full lg:w-1/2">
+                        <h3 class="font-bold" style="color: var(--theme-color);">WHAT WE DO ?</h3>
+                        <h2 class="text-4xl font-semibold leading-snug">The service we offer is specifically designed to
+                            meet your needs.</h2>
+                    </div>
+                </div>
+                <div class="services-inner">
+                    <div class="slider responsive">
+                        <div class="services-item p-3 mx-3 my-3 animate__fadeInDown wow">
+                            <a href="javascript:void(0)" class="p-3 bg-cyan-100 bg-opacity-50 inline-block rounded-md"
+                                style="color: var(--theme-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                </svg>
+                            </a>
+                            <h3 class="text-xl font-semibold py-2">24/7 Support</h3>
+                            <p class="text-slate-600 leading-6">Nulla vitae elit libero, a pharetra augue. Donec id elit
+                                non mi porta gravida at eget metus. Cras justo.</p>
+                            <a href="javascript:void(0)" class=" font-medium pt-3 inline-block"
+                                style="color: var(--theme-color);">Learn More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="services-item p-3 mx-3 my-3 animate__fadeInDown wow" data-wow-delay="0.3s">
+                            <a href="javascript:void(0)" class="p-3 bg-cyan-100 bg-opacity-50 inline-block rounded-md"
+                                style="color: var(--theme-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                                </svg>
+                            </a>
+                            <h3 class="text-xl font-semibold py-2">Secure Payments</h3>
+                            <p class="text-slate-600 leading-6">Nulla vitae elit libero, a pharetra augue. Donec id elit
+                                non mi porta gravida at eget metus. Cras justo.</p>
+                            <a href="javascript:void(0)" class=" font-medium pt-3 inline-block"
+                                style="color: var(--theme-color);">Learn More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="services-item p-3 mx-3 my-3  animate__fadeInDown wow" data-wow-delay="0.5s">
+                            <a href="javascript:void(0)" class="p-3 bg-cyan-100 bg-opacity-50 inline-block rounded-md"
+                                style="color: var(--theme-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+                                </svg>
+                            </a>
+                            <h3 class="text-xl font-semibold py-2">Daily Updates</h3>
+                            <p class="text-slate-600 leading-6">Nulla vitae elit libero, a pharetra augue. Donec id elit
+                                non mi porta gravida at eget metus. Cras justo.</p>
+                            <a href="javascript:void(0)" class="font-medium pt-3 inline-block"
+                                style="color: var(--theme-color);">Learn More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="services-item p-3 mx-3 my-3  animate__fadeInDown wow" data-wow-delay="0.7s">
+                            <a href="javascript:void(0)" class="p-3 bg-cyan-100 bg-opacity-50 inline-block rounded-md"
+                                style="color: var(--theme-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                                </svg>
+                            </a>
+                            <h3 class="text-xl font-semibold py-2">Market Research</h3>
+                            <p class="text-slate-600 leading-6">Nulla vitae elit libero, a pharetra augue. Donec id elit
+                                non mi porta gravida at eget metus. Cras justo.</p>
+                            <a href="javascript:void(0)" class=" font-medium pt-3 inline-block"
+                                style="color: var(--theme-color);">Learn More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="services-item p-3 mx-3 my-3 animate__fadeInDown wow">
+                            <a href="javascript:void(0)" class="p-3 bg-cyan-100 bg-opacity-50 inline-block rounded-md"
+                                style="color: var(--theme-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                </svg>
+                            </a>
+                            <h3 class="text-xl font-semibold py-2">24/7 Support</h3>
+                            <p class="text-slate-600 leading-6">Nulla vitae elit libero, a pharetra augue. Donec id elit
+                                non mi porta gravida at eget metus. Cras justo.</p>
+                            <a href="javascript:void(0)" class=" font-medium pt-3 inline-block"
+                                style="color: var(--theme-color);">Learn More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="services-item p-3 mx-3 my-3  animate__fadeInDown wow">
+                            <a href="javascript:void(0)" class="p-3 bg-cyan-100 bg-opacity-50 inline-block rounded-md"
+                                style="color: var(--theme-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                                </svg>
+                            </a>
+                            <h3 class="text-xl font-semibold py-2">Secure Payments</h3>
+                            <p class="text-slate-600 leading-6">Nulla vitae elit libero, a pharetra augue. Donec id elit
+                                non mi porta gravida at eget metus. Cras justo.</p>
+                            <a href="javascript:void(0)" class=" font-medium pt-3 inline-block"
+                                style="color: var(--theme-color);">Learn More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="services-item p-3 mx-3 my-3 animate__fadeInDown wow">
+                            <a href="javascript:void(0)" class="p-3  bg-cyan-100 bg-opacity-50 inline-block rounded-md"
+                                style="color: var(--theme-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+                                </svg>
+                            </a>
+                            <h3 class="text-xl font-semibold py-2">Daily Updates</h3>
+                            <p class="text-slate-600 leading-6">Nulla vitae elit libero, a pharetra augue. Donec id elit
+                                non mi porta gravida at eget metus. Cras justo.</p>
+                            <a href="javascript:void(0)" class=" font-medium pt-3 inline-block"
+                                style="color: var(--theme-color);">Learn More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="services-item p-3 mx-3 my-3 animate__fadeInDown wow">
+                            <a href="javascript:void(0)" class="p-3  bg-cyan-100 bg-opacity-50 inline-block rounded-md"
+                                style="color: var(--theme-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                                </svg>
+                            </a>
+                            <h3 class="text-xl font-semibold py-2">Market Research</h3>
+                            <p class="text-slate-600 leading-6">Nulla vitae elit libero, a pharetra augue. Donec id elit
+                                non mi porta gravida at eget metus. Cras justo.</p>
+                            <a href="javascript:void(0)" class=" font-medium pt-3 inline-block"
+                                style="color: var(--theme-color);">Learn More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKS -->
+
+        <section class="work py-[100px] px-5">
+            <div class="container mx-auto">
+                <div class="work-inner">
+                    <div class="flex flex-wrap items-center">
+                        <div class="lg:w-2/4 w-full">
+                            <div class="work-img lg:pe-14 relative  animate__fadeInDown wow">
+                                <img src="img/work.jpg" alt="work" title="work" width="100%" class="rounded-xl">
+                                <img src="img/shape.PNG" alt="shape" title="shape" width="25%"
+                                    class="absolute top-[-10%] left-[-8%] -z-10 hidden lg:block">
+                                <div
+                                    class="w-[500px] h-[500px] bg-slate-300 rounded bg-opacity-50  absolute bottom-[-5%] right-[3%] -z-10 hidden xl:block">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-2/5 lg:mt-0 w-full mt-14 ms-8">
+                            <div class="work-content  animate__fadeInDown wow" data-wow-delay="0.3s">
+                                <h3 class=" font-bold" style="color: var(--theme-color);">HOW IT WORKS ?</h3>
+                                <h2 class="text-[38px] font-bold text-slate-700 leading-[40px] py-5">Here are the 3
+                                    working steps on success.</h2>
+                                <div class="flex mb-10">
+                                    <span
+                                        class=" bg-cyan-100 bg-opacity-50 w-16 h-14 text-xl rounded-md inline-block me-10 text-center leading-[56px]"
+                                        style="color: var(--theme-color);">1</span>
+                                    <div>
+                                        <h4 class="text-xl font-[700] text-slate-700">Collect Ideas</h4>
+                                        <p class="text-md ">Nulla vitae elit libero pharetra augue dapibus. Praesent
+                                            commodo cursus.</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-10">
+                                    <span
+                                        class=" bg-cyan-100 bg-opacity-50 w-16 h-14 text-xl rounded-md inline-block me-10 text-center leading-[56px]"
+                                        style="color: var(--theme-color);">2</span>
+                                    <div>
+                                        <h4 class="text-xl font-[700] text-slate-700">Data Analysis</h4>
+                                        <p class="text-md ">Vivamus sagittis lacus vel augue laoreet. Etiam porta sem
+                                            malesuada magna.</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-10">
+                                    <span
+                                        class=" bg-cyan-100 bg-opacity-50 w-16 h-14 text-xl rounded-md inline-block me-10 text-center leading-[56px]"
+                                        style="color: var(--theme-color);">3</span>
+                                    <div>
+                                        <h4 class="text-xl font-[700] text-slate-700">Finalize Product</h4>
+                                        <p class="text-md ">Cras mattis consectetur purus sit amet. Aenean lacinia
+                                            bibendum nulla sed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHOOSE-US -->
+
+        <section class="choose pb-[100px] px-5">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap">
+                    <div class="xl:w-2/4 w-full">
+                        <div class="choose-content">
+                            <h3 class="font-bold" style="color: var(--theme-color);">WHY CHOOSE US?</h3>
+                            <h2 class="text-[38px] font-bold text-slate-700 leading-[40px] py-5 ">A few reasons why our
+                                valued customers choose us.</h2>
+                            <div class="accordian mt-10">
+                                <div class="accordian-item mb-5 animate__fadeInLeft wow">
+                                    <h2 class=" p-5 text-white rounded cursor-pointer relative"
+                                        style="background-color: var(--theme-color);">Professional Design
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6 inline-block absolute right-[3%]">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                    </h2>
+                                    <div class="accordian-content border rounded p-5 mb-10"
+                                        style="border-color: var(--theme-color);">
+                                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                                            fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
+                                            fermentum. Praesent commodo cursus magna, vel.</p>
+                                    </div>
+                                </div>
+                                <div class="accordian-item mb-5 animate__fadeInLeft wow" data-wow-delay="0.3s">
+                                    <h2 class="p-5 text-white rounded cursor-pointer relative"
+                                        style="background-color: var(--theme-color);">Top-Notch Support
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6 inline-block absolute right-[3%]">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                    </h2>
+                                    <div class="accordian-content border  rounded p-5 mb-10 hidden"
+                                        style="border-color: var(--theme-color);">
+                                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                                            fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
+                                            fermentum. Praesent commodo cursus magna, vel.</p>
+                                    </div>
+                                </div>
+                                <div class="accordian-item mb-5 animate__fadeInLeft wow" data-wow-delay="0.5s">
+                                    <h2 class="p-5 text-white rounded cursor-pointer relative"
+                                        style="background-color: var(--theme-color);">Header and Slider Options
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6 inline-block absolute right-[3%]">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5 absolute right-[3%]" />
+                                        </svg>
+                                    </h2>
+                                    <div class="accordian-content border rounded p-5 mb-10 hidden"
+                                        style="border-color: var(--theme-color);">
+                                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                                            fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet
+                                            fermentum. Praesent commodo cursus magna, vel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-2/4 w-full hidden xl:block">
+                        <div class="work-img ps-14 relative animate__fadeInDown wow" data-wow-delay="1s">
+                            <img src="img/choose.jpg" alt="work" title="work" width="100%" class="rounded-xl lg:pe-10">
+                            <img src="img/shape.PNG" alt="shape" title="shape" width="25%"
+                                class="absolute bottom-[-10%] right-[-5%] -z-10 me-5 hidden lg:block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JOIN -->
+
+        <section class="join relative px-5">
+            <div class="container mx-auto h-full">
+                <div class="md:w-6/12 w-full flex items-center h-full">
+                    <div class="join-item animate__fadeInLeft wow">
+                        <h3 class="font-semibold" style="color:var(--theme-color)">JOIN OUR COMMUNITY</h3>
+                        <h2 class="text-white md:text-4xl text-2xl font-semibold md:leading-normal py-5">We are trusted
+                            by over 5000+ clients. Join them by using our services and grow your business.</h2>
+                        <a href="javascript:void(0)" class="font-bold px-5 py-3 rounded inline-block btn transition-[1s] text-white"
+                            style="background-color: var(--theme-color);">Join Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE-STUDY -->
+
+        <section class="case-study py-[100px] px-5">
+            <div class="container mx-auto">
+                <div class="md:w-2/3 w-full">
+                    <div class="case-title animate__fadeIn wow">
+                        <h3 class="font-bold" style="color:var(--theme-color)">CASE STUDIES</h3>
+                        <h2 class="md:text-4xl text-2xl font-semibold py-5">Check out some of our awesome projects with
+                            creative ideas and great design.</h2>
+                    </div>
+                </div>
+                <div class="case-inner">
+                    <div class="flex flex-wrap">
+                        <div class="md:w-1/2  lg:w-1/3 w-full">
+                            <div class="case-items py-5 md:mx-5 animate__fadeInDown wow">
+                               <div class="case-img overflow-hidden">
+                                    <a href="javascript:void(0)">
+                                        <img src="img/cs1.jpg" alt="cs1" title="cs1" width="100%" class="rounded-md hover:scale-110 transition-[0.7s]">
+                                    </a>
+                               </div>
+                                <div class="case-content">
+                                    <a href="javascript:void(0)" class="hover:text-cyan-700 transition-[0.4s] inline-block"><h2 class="text-xl font-bold py-3">Ligula tristique quis risus</h2></a>
+                                    <div>
+                                        <span class="text-gray-400 opacity-80 me-10">14 Apr 2022</span>
+                                    <span class="text-gray-400 opacity-80">Coding</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2  lg:w-1/3 w-full">
+                            <div class="case-items py-5 md:mx-5 animate__fadeInDown wow" data-wow-delay="0.3s">
+                               <div class="case-img overflow-hidden">
+                                    <a href="javascript:void(0)">
+                                        <img src="img/cs3.jpg" alt="cs3" title="cs3" width="100%" class="rounded-md hover:scale-110 transition-[0.7s]">
+                                    </a>
+                               </div>
+                                <div class="case-content">
+                                    <a href="javascript:void(0)" class="hover:text-cyan-700 transition-[0.4s] inline-block"><h2 class="text-xl font-bold py-3">Ultricies fusce porta elit</h2></a>
+                                    <div>
+                                        <span class="text-gray-400 opacity-80 me-10">26 Feb 2022</span>
+                                        <span class="text-gray-400 opacity-80">Meeting</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2  lg:w-1/3 w-full">
+                            <div class="case-items py-5 md:mx-5 animate__fadeInDown wow" data-wow-delay="0.5s">
+                               <div class="case-img overflow-hidden">
+                                    <a href="javascript:void(0)">
+                                        <img src="img/cs2.jpg" alt="cs2" title="cs2" width="100%" class="rounded-md hover:scale-110 transition-[0.7s]">
+                                    </a>
+                               </div>
+                                <div class="case-content">
+                                    <a href="javascript:void(0)" class="hover:text-cyan-700 transition-[0.4s] inline-block"><h2 class="text-xl font-bold py-3">Nullam id dolor elit id nibh</h2></a>
+                                    <div>
+                                        <span class="text-gray-400 opacity-80 me-10">29 Mar 2022</span>
+                                        <span class="text-gray-400 opacity-80">Workspace</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section class="projects overflow-hidden">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap">
+                    <div class="lg:w-2/5 w-full">
+                        <div class="projects-title pb-10 lg:pb-0 text-center animate__fadeInLeft wow">
+                            <h3 class="font-bold py-5" style="color:var(--theme-color)">COMPANY FACTS</h3>
+                            <h2 class="font-semibold text-3xl">We are proud of our works</h2>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/5 w-full">
+                        <div class="projects-item flex justify-between px-5 animate__fadeInRight wow">
+                            <div class="text-center">
+                                <div class="counter text-6xl font-semibold pb-5 inline-block" data-speed="1000">1000
+                                </div>
+                                <span class="text-7xl">+</span>
+                                <h3 class="font-semibold text-xl">Completed Projects</h3>
+                            </div>
+                            <div class="text-center">
+                                <div class="counter text-6xl font-semibold pb-5 inline-block" data-speed="1000">500
+                                </div>
+                                <span class="text-7xl">+</span>
+                                <h3 class="font-semibold text-xl">Happy Clients</h3>
+                            </div>
+                            <div class="text-center">
+                                <div class="counter text-6xl font-semibold pb-5 inline-block" data-speed="1000">150
+                                </div>
+                                <span class="text-7xl">+</span>
+                                <h3 class="font-semibold text-xl">Awards Won</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL -->
+
+        <section class="testimonial py-[100px] px-5 overflow-hidden">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap items-center">
+                    <div class="md:w-1/2 w-full">
+                        <div class="testimonial-img animate__fadeInLeft wow">
+                            <img src="img/testimonial.jpg" alt="testimonial" title="testimonial" width="100%"
+                                class="rounded-xl">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full">
+                        <div class="testimonial-content">
+                            <div class="swiper testimonial-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide p-7 text-center">
+                                        <p class="text-2xl text-gray-400">“Vivamus sagittis lacus vel augue laoreet
+                                            rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper.
+                                            Cras justo odio.”</p>
+                                        <h3 class="text-lg font-semibold py-3">Nikolas Brooten<span
+                                                class="font-semibold text-gray-500">( Sales Manager )</span></h3>
+
+                                    </div>
+                                    <div class="swiper-slide px-5 text-center">
+                                        <p class="text-2xl text-gray-400">“Vivamus sagittis lacus vel augue laoreet
+                                            rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper.
+                                            Cras justo odio.”</p>
+                                        <h3 class="text-lg font-semibold py-3">Niya Oberoi<span
+                                                class="font-semibold text-gray-500">(Marketing Manager)</span></h3>
+
+                                    </div>
+                                    <div class="swiper-slide px-5 text-center">
+                                        <p class="text-2xl text-gray-400">“Vivamus sagittis lacus vel augue laoreet
+                                            rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper.
+                                            Cras justo odio.”</p>
+                                        <h3 class="text-lg font-semibold py-3">Nick Jonas<span
+                                                class="font-semibold text-gray-500">(Branch Head)</span></h3>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLAN -->
+
+        <section class="plan px-5">
+            <div class="container mx-auto">
+                <div class="plan-inner">
+                    <div class="flex flex-wrap">
+                        <div class="lg:w-1/3 w-full">
+                            <div class="plan-items text-center lg:text-left lg:my-5 animate__fadeInDown wow">
+                                <h3 class=" font-bold" style="color:var(--theme-color)">OUR PRICING</h3>
+                                <h2 class="text-3xl font-semibold py-4">We offer great and premium prices.</h2>
+                                <p class="font-semibold text-slate-400">Enjoy a <span
+                                        style="color:var(--theme-color)">free 30-day trial</span> and experience the
+                                    full service. No credit card required!</p>
+                                <a href="javascript:void(0)"
+                                    class="text-white font-semibold px-5 py-3 rounded-md inline-block mt-4 btn transition-[1s]"
+                                    style="background-color:var(--theme-color)">See All Prices</a>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 lg:w-1/3 w-full">
+                            <div class="plan-items text-center shadow-xl py-10 my-5 md:mx-5 animate__fadeInDown wow" data-wow-delay="0.3s">
+                                <h3>$ <span class="text-4xl font-semibold">19</span> /mo</h3>
+                                <h2 class="font-semibold text-xl">Premium plan</h2>
+                                <ul class="py-5">
+                                    <li class="text-[16px] pb-3"> <span class="text-slate-400">5</span> projects</li>
+                                    <li class="text-[16px] pb-3"> <span class="text-slate-400">100k</span> API Access
+                                    </li>
+                                    <li class="text-[16px] pb-3"> <span class="text-slate-400">200 MB</span> Storage
+                                    </li>
+                                    <li class="text-[16px] pb-3">Weekly <span class="text-slate-400">Reports</span></li>
+                                    <li class="text-[16px] pb-3">7/24 <span class="text-slate-400">Support</span></li>
+                                </ul>
+                                <a href="javascript:void (0)"
+                                    class="text-white font-semibold px-5 py-3 rounded-md inline-block btn transition-[1s]"
+                                    style="background-color:var(--theme-color)">Choose Plan</a>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 lg:w-1/3 w-full">
+                            <div class="plan-items text-center shadow-xl py-10 my-5 md:mx-5  animate__fadeInDown wow" data-wow-delay="0.5s">
+                                <h3>$ <span class="text-4xl font-semibold">49</span> /mo</h3>
+                                <h2 class="font-semibold text-xl">Corporate plan</h2>
+                                <ul class="py-5">
+                                    <li class="text-[16px] pb-3"> <span class="text-slate-400">20</span> projects</li>
+                                    <li class="text-[16px] pb-3"> <span class="text-slate-400">300k</span> API Access
+                                    </li>
+                                    <li class="text-[16px] pb-3"> <span class="text-slate-400">500 MB</span> Storage
+                                    </li>
+                                    <li class="text-[16px] pb-3">Weekly <span class="text-slate-400">Reports</span></li>
+                                    <li class="text-[16px] pb-3">7/24 <span class="text-slate-400">Support</span></li>
+                                </ul>
+                                <a href="javascript:void (0)"
+                                    class=" text-white font-semibold px-5 py-3 rounded-md inline-block btn transition-[1s]"
+                                    style="background-color:var(--theme-color)">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+
+        <section class="contact py-[100px] px-5">
+            <div class="container mx-auto">
+                <div class="contact-inner">
+                    <div class="flex flex-wrap items-center">
+                        <div class="lg:w-2/4">
+                            <div class="contact-img lg:pe-14 relative">
+                                <img src="img/contact.jpg" alt="contact" title="contact" width="100%"
+                                    class="rounded-xl animate__fadeInLeft wow">
+                                <img src="img/shape.PNG" alt="shape" title="shape" width="25%"
+                                    class="absolute top-[-10%] left-[-8%] -z-10 hidden lg:block">
+                            </div>
+                        </div>
+                        <div class="lg:w-2/5 md:ms-14 mt-14">
+                            <div class="contact-content animate__fadeInLeft wow" data-wow-delay="0.3s">
+                                <h3 class="font-bold" style="color:var(--theme-color)">GET IN TOUCH</h3>
+                                <h2 class="text-[38px] font-bold text-slate-700 leading-[40px] pt-5 pb-8">Convinced yet?
+                                    Let's make something great together.</h2>
+                                <div class="flex mb-10">
+                                    <span class="py-3 text-xl rounded-md inline-block me-10"
+                                        style="color:var(--theme-color)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <h4 class="text-xl font-[700] text-slate-700">
+                                            Address</h4>
+                                        <a href="javascript:void(0)" class="text-md"
+                                            style="color:var(--theme-color)">Moonshine St. 14/05 Light City,
+                                            London, United Kingdom<a>
+                                    </div>
+                                </div>
+                                <div class="flex mb-10">
+                                    <span class=" py-3 text-xl rounded-md inline-block me-10 text-center leading-[56px]"
+                                        style="color:var(--theme-color)"><svg xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <h4 class="text-xl font-[700] text-slate-700">Phone</h4>
+                                        <a href="javascript:void(0)" class="text-md "
+                                            style="color:var(--theme-color)">00 (123) 456 78 90</a>
+                                    </div>
+                                </div>
+                                <div class="flex mb-10">
+                                    <span class="py-3 text-xl rounded-md inline-block me-10 text-center leading-[56px]"
+                                        style="color:var(--theme-color)"><svg xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                            class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <h4 class="text-xl font-[700] text-slate-700">
+                                            E-mail</h4>
+                                        <a href="javascript:void(0)" class="text-md"
+                                            style="color:var(--theme-color)">Sandbox@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-slate-700 pt-[200px] pb-[100px] relative px-5">
+        <div class="container mx-auto">
+            <div class="footer-inner animate__fadeIn wow">
+                <div class="flex flex-wrap">
+                    <div class="md:w-2/4 lg:w-1/3 xl:w-1/4 w-full">
+                        <div class="footer-items pb-10 md:pb-0">
+                            <img src="img/logo2.png" alt="logo2" title="logo2" width="150px" class="mb-3">
+                            <h3 class="text-gray-400">© 2024 Sandbox.</h3>
+                            <h3 class="text-gray-400 mt-2 mb-5">All rights reserved.</h3>
+                            <ul class="flex">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5 me-4 text-white hover:text-cyan-400 transition-[0.4s]">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                        </svg>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5 me-4 text-white hover:text-cyan-400 transition-[0.4s]">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                        </svg>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-5 h-5 me-4  text-white hover:text-cyan-400 transition-[0.4s]">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                        </svg>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-2/4 lg:w-1/3 xl:w-1/4 w-full pb-10 lg:pb-0 lg:pe-5">
+                        <div class="footer-items">
+                            <h2 class="text-white text-2xl font-bold">Get in Touch</h2>
+                            <p class="text-gray-400 my-3 leading-normal hover:text-cyan-400 transition-[0.4s]">Moonshine St. 14/05 Light City, London, United
+                                Kingdom</p>
+                            <a href="javascript:void(0)" class="text-gray-400 inline-block mb-3 hover:text-cyan-400  transition-[0.4s]">info@email.com</a><br>
+                            <a href="javascript:void(0)" class="text-gray-400 inline-block hover:text-cyan-400  transition-[0.4s]">00 (123) 456 78 90</a>
+                        </div>
+                    </div>
+                    <div class="md:w-2/4 lg:w-1/3 xl:w-1/4 w-full">
+                        <div class="footer-items pb-10 lg:pb-0">
+                            <h3 class="text-white text-2xl font-bold mb-3">Learn More</h3>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)" class="text-gray-400  mb-3 inline-block hover:text-cyan-400 transition-[0.4s]">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="text-gray-400  mb-3 inline-block hover:text-cyan-400 transition-[0.4s]">Our Story</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="text-gray-400  mb-3 inline-block hover:text-cyan-400 transition-[0.4s]">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="text-gray-400  mb-3 inline-block hover:text-cyan-400 transition-[0.4s]">Terms of
+                                        Use</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="text-gray-400  mb-3 inline-block hover:text-cyan-400 transition-[0.4s]">Privacy
+                                        Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-2/4 lg:w-1/3 xl:w-1/4 w-full">
+                        <div class="footer-items pb-10 lg:pb-0">
+                            <h3 class="text-white text-2xl font-bold mb-3">Our Newsletter</h3>
+                            <p class="text-gray-400">Subscribe to our newsletter to get our news & deals delivered to
+                                you.</p>
+                            <form class="mt-3">
+                                <input type="email" placeholder="Email Address" class="p-3 outline-none">
+                                <button class="text-white px-5 py-3 translate-x-[-10px]"
+                                    style="background-color:var(--theme-color)">Join</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK-TO-TOP -->
+
+    <a href="javascript:void(0)"
+        class="text-white px-3 py-3 inline-block fixed right-3 bottom-3 rounded back-to-top z-10"
+        style="background-color:var(--theme-color)">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+        </svg>
+    </a>
+
+    <script src="js/jquery-min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="slick/slick.min.js" type="text/javascript"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/wow.min.js" type="text/javascript"></script>
+    <script src="js/js.js" type="text/javascript"></script>
+
+</body>
+
+</html>

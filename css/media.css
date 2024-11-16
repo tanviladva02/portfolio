@@ -1,0 +1,37 @@
+@media(min-width:992px)
+{
+    /* ABOUT */
+
+    .about-img img{
+        border-right:1px solid #008080;
+        padding-right: 30px!important;
+    }
+    .education-inner::before,.about-inner::before,.education-inner .row .col-6:first-child .education-main .education-item:first-child:before,.education-inner .row .col-6:first-child .education-main .education-item:nth-child(3):before,.about-inner .about-img:before,.about-inner .about-img::after{
+        display: block;
+    }
+    .about-inner::before{
+        top:7%;
+    }
+    .about-inner .about-img:before,.about-inner .about-img::after{
+        right:-5%;
+    }
+
+}
+@media(min-width:1200px)
+{
+    /* BANNER */
+
+    .banner-img img{
+        margin-left:100px;
+    }
+
+    /* CONTACT */
+
+   .contact .contact-inner .row .col-12:first-child .contact-main{
+        border-right:1px solid #008080!important;
+    }
+    .contact-inner .contact-main::before,.contact-inner .contact-main::after,.contact-inner::before{
+        display:block;
+    }
+
+}

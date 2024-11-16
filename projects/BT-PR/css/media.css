@@ -1,0 +1,32 @@
+@media(min-width:992px)
+{
+    
+    /* SLIDER */
+
+    .slider .carousel-inner .carousel-item{
+        height:800px;
+    }
+    .slider .carousel-inner .carousel-content{
+        width:75%;
+        text-align: left;
+    }
+}
+@media(min-width:1200px)
+{
+
+    /* CATEGORIES */
+
+    .categories-inner .col-xl-5 img{
+        height:472px;
+    }
+    
+}
+@media(min-width:1400px)
+{
+     /* CATEGORIES */
+
+     .categories-inner .col-xl-5 img{
+        height:546px;
+    }
+    
+}

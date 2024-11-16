@@ -1,0 +1,300 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+a{
+    display: inline-block;
+}
+body{
+    font-family: 'Jost'!important;
+}
+.about-title h2,.skill-title h2,.project-title h2,.education-title h2,.contact-title h2{
+    font-size: 60px;
+    color: #008080!important;
+}
+.about,.projects,.contact{
+    padding:100px 0;
+}
+.row{
+    --bs-gutter-x: inherit!important;
+}
+.education-inner::before,.contact-inner::before,.about-inner::before{
+    content: '\F6FE';
+    font-family:bootstrap-icons;
+    background-color: #008080;
+    color: white;
+    padding:8px 12px;
+    font-size: 25px;
+    border-radius: 50%;
+    position:absolute;
+    top:15px;
+    left:49%;
+    transform: translateX(-50%);
+    z-index: 9;
+    display:none;
+}
+.contact-inner::before{
+    content: '\F676'!important ;
+    display: none;
+}
+.education-inner .row .col-6:first-child .education-main .education-item:nth-child(3):before{
+    top:0!important;
+    right: 2!important;
+}
+.education-inner .row .col-6:first-child .education-main .education-item:first-child:before,.education-inner .row .col-6:first-child .education-main .education-item:nth-child(3):before,.about-inner .about-img:before,.about-inner .about-img::after,.contact-inner .contact-main::before,.contact-inner .contact-main::after{
+    content: '\F287';
+    font-family:bootstrap-icons;
+    color:#008080;
+    font-size: 10px;
+    background-color: black;
+    border:1px solid white;
+    padding:10px 12px;
+    border-radius: 50%;
+    position: absolute;
+    top:127px;
+    right:-35px;
+    transform: translateX(-50%);
+    z-index: 9;
+    display:none;
+}
+.about-inner .about-img:before{
+    top:30%;
+    right:-5%;
+}
+.about-inner .about-img::after{
+    top:70%;
+    right:-5%;
+}
+.contact-inner .contact-main::before{
+    top:30%;
+    right:48%;
+}
+.contact-inner .contact-main::after{
+    top:60%;
+    right:48%;
+}
+.theme-color{
+    color:#008080!important;
+}
+.theme-bg{
+    background-color: #008080!important;
+}
+.theme-border{
+    border:1px solid #008080!important;
+}
+.theme-border-color{
+    border-color: #008080!important;
+}
+
+/* LOADER */
+
+
+.loader{
+    width:70px;
+    height:70px;
+    border:10px dotted #008080;
+    border-radius: 50%;
+    animation: loader 2s infinite linear;
+}
+@keyframes loader {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.overlay{
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 9;
+}
+
+
+/* HEADER */
+
+header{
+    position: fixed!important;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 99;
+    background-color: rgba(0, 128, 128,0.1);
+}
+.logo{
+    font-size: 50px;
+    margin: 10px 0;
+}
+header nav ul li a{
+    transition: 0.4s;
+}
+header nav ul li:first-child a{
+    /* color: #008080!important;
+    text-decoration: underline!important;  */
+}
+header nav ul li a:hover{
+    /* color: #008080!important;
+    text-decoration: underline!important; */
+}
+.navbar-toggler{
+    background-color: white!important;
+}
+
+.active{
+    background-color:rgba(0, 128, 128,.7);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    animation: slide-down 1s linear;
+}
+ @keyframes slide-down {
+            0%{
+                transform: translateY(-100%);
+            }
+        }
+
+/* BANNER */
+
+.banner{
+    background: url(../img/banner-bg.avif),  rgba(0,0,0,0.7);
+    height:750px;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:darken;
+}
+.banner-img img{
+    border-radius: 50%;
+}
+.banner-content h2{
+    font-size: 30px;
+}
+.banner-content p,.about-content p{
+    color:#999999;
+}
+
+/* ABOUT */
+
+.about,.education{
+    overflow-x: hidden;
+}
+.about-img img{
+    border-radius: 5px;
+    filter:brightness(0.9);
+}
+.about-content a,.banner-content a{
+    font-size: 18px;
+    padding:8px 15px;
+    transition:0.4s;
+    border-radius: 5px;
+    background-color: black;
+}
+.about-content a:hover,.banner-content a:hover{
+    background-color: #008080;
+    color: black!important;
+}
+.about-content ul li span:last-child{
+    color:#008080;
+    padding-left:5px;
+}
+
+/* SKILLS */
+
+.skill-inner .skill-item{
+    transition: 0.4s;
+    border-width: 2px!important;
+    border-style: double!important;
+    border-color: #008080!important;
+    background-color: black;
+}
+.skill-inner .skill-item:hover{
+    color: #008080 !important;
+    transform: translateY(-5%);
+}
+
+/* PROJECTS */
+
+.projects .project-inner .project-item:hover .project-btn{
+   background-color: #008080!important;
+}
+.projects .project-inner .project-item:hover{
+    border:2px solid #008080!important;
+}
+.projects .project-inner .project-item{
+    background-color: black;
+}
+.projects .project-item .project-btn,.projects .project-inner .project-item{
+    transition: 0.4s;
+}
+
+/* EDUCATION */
+
+.education .education-main{
+    border-color: #008080;
+}
+.education-main .education-item{
+    margin-top:70px!important;
+}
+
+
+/* CONTACT */
+
+.contact-main{
+    margin:70px 0;
+}
+.contact-items{
+    background-color: black;
+}
+.contact-items i{
+    border-radius: 50%;
+    padding:10px 14px;
+}
+.contact-items ul li a i{
+    transition: 0.4s;
+}
+.contact-items ul li a i:hover{
+    color: #008080!important;
+}
+
+/* FOOTER */
+
+footer{
+    background-color:black;
+}
+.footer-item ul li i{
+    border-radius: 50%;
+    padding:8px 11px;
+    transition: 0.4s;
+}
+.footer-item ul li i:hover{
+    background-color: #008080!important;
+    color: white!important;
+}
+.footer-inner .col-12:nth-child(2) .footer-item ul li a{
+    transition: 0.4s;
+}
+.footer-inner .col-12:nth-child(2) .footer-item ul li a:hover{
+    border-bottom: 1px solid #008080;
+    color: #008080!important;
+}
+
+/* BACK-TO-TOP BUTTON */
+
+.backtotop{
+	position:absolute;
+}
+.backtotop i{
+	padding:8px 13px;
+	position:fixed;
+	bottom:15px;
+	right:15px;
+    border-radius: 50%;
+	font-size:20px;
+    background-color: #008080;
+}
